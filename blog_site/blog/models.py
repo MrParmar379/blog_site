@@ -12,6 +12,7 @@ class BlogsTable(models.Model):
     blog_id = models.AutoField(primary_key=True)
     content = models.TextField()
     blog_type = models.ForeignKey(BlogType, on_delete=models.CASCADE)
+    blog_title = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.content
